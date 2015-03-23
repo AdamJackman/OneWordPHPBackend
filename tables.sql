@@ -1,5 +1,5 @@
  CREATE TABLE saltstore(
- userid INTEGER NOT NULL,
+ userid INTEGER REFERENCES users(userid),
  site varchar(64) NOT NULL,
  salt varchar(64) NOT NULL,
  len INTEGER NOT NULL,
@@ -11,5 +11,5 @@
  
   CREATE TABLE users(
  userid SERIAL PRIMARY KEY,
- Varchar(24) username NOT NULL
+ username VARCHAR(24) NOT NULL 
  );
